@@ -1,0 +1,58 @@
+Unnamed: 0,Unnamed: 1_level_0,Unnamed: 2_level_0,Unnamed: 3_level_0,ppg,opp,Games,Receiving,Fantasy,Fantasy.1,Fantasy.2,Fantasy.3
+,Player,Tm,FantPos,,,G,Tgt,FantPt,PPR,PosRank,OvRank
+39.0,Robert Tonyan,GNB,TE,11.04,3.69,16,59,125,176.6,3,39
+57.0,Logan Thomas,WAS,TE,11.04,6.88,16,110,105,176.6,7,57
+52.0,T.J. Hockenson *,DET,TE,10.96,6.31,16,101,108,175.3,5,52
+56.0,Mike Gesicki,MIA,TE,10.62,5.67,15,85,106,159.3,6,56
+181.0,Dallas Goedert,PHI,TE,10.58,5.91,11,65,70,116.4,20,
+159.0,Hunter Henry,LAC,TE,10.38,6.64,14,93,85,145.3,15,
+154.0,Noah Fant,DEN,TE,9.95,6.2,15,93,87,149.3,13,
+157.0,Eric Ebron,PIT,TE,9.45,6.07,15,91,86,141.8,14,
+322.0,O.J. Howard,TAM,TE,9.4,4.75,4,19,27,37.6,53,
+68.0,Jonnu Smith,TEN,TE,9.35,4.33,15,65,99,140.2,9,67
+58.0,Rob Gronkowski,TAM,TE,9.33,4.81,16,77,104,149.3,8,58
+73.0,Hayden Hurst,ATL,TE,9.32,5.5,16,88,93,149.1,11,72
+166.0,Dalton Schultz,DAL,TE,9.16,5.56,16,89,84,146.5,17,
+71.0,Jimmy Graham,CHI,TE,8.97,4.75,16,76,94,143.6,10,70
+171.0,Evan Engram *,NYG,TE,8.81,6.81,16,109,78,141.0,18,
+195.0,Austin Hooper,CLE,TE,8.73,5.38,13,70,68,113.5,22,
+161.0,Tyler Higbee,LAR,TE,8.55,4.0,15,60,84,128.2,16,
+151.0,Jared Cook,NOR,TE,8.49,4.0,15,60,90,127.4,12,
+190.0,Irv Smith Jr.,MIN,TE,7.58,3.31,13,43,69,98.5,21,
+253.0,Jordan Reed,SFO,TE,7.31,4.6,10,46,47,73.1,28,
+263.0,Zach Ertz,PHI,TE,7.05,6.55,11,72,42,77.5,35,
+247.0,Jordan Akins,HOU,TE,6.44,3.77,13,49,47,83.7,30,
+227.0,Trey Burton,IND,TE,6.41,3.62,13,47,55,83.3,24,
+198.0,Dan Arnold,ARI,TE,6.05,2.81,16,45,66,96.8,23,
+235.0,Gerald Everett,LAR,TE,5.81,3.88,16,62,52,92.9,26,
+262.0,Dawson Knox,BUF,TE,5.57,3.67,12,44,43,66.8,33,
+249.0,Tyler Eifert,JAX,TE,5.53,4.0,15,60,47,82.9,29,
+283.0,Kyle Rudolph,MIN,TE,5.45,3.08,12,37,37,65.4,41,
+242.0,Mo Alie-Cox,IND,TE,5.36,2.6,15,39,49,80.4,27,
+258.0,Anthony Firkser,TEN,TE,5.23,3.31,16,53,45,83.7,32,
+254.0,Richard Rodgers,PHI,TE,5.04,2.21,14,31,47,70.5,31,
+275.0,Drew Sample,CIN,TE,4.93,3.31,16,53,39,78.9,39,
+307.0,Greg Olsen,SEA,TE,4.9,3.36,11,37,30,53.9,49,
+228.0,Darren Fells,HOU,TE,4.76,1.75,16,28,55,76.2,25,
+261.0,Chris Herndon,NYJ,TE,4.61,2.81,16,45,43,73.7,34,
+266.0,Jack Doyle,IND,TE,4.58,2.36,14,33,41,64.1,36,
+271.0,Cameron Brate,TAM,TE,4.26,2.12,16,34,40,68.2,38,
+306.0,Tyler Kroft,BUF,TE,4.19,1.6,10,16,30,41.9,50,
+337.0,Nick Boyle,BAL,TE,4.14,1.89,9,17,23,37.3,58,
+276.0,Harrison Bryant,CLE,TE,4.12,2.53,15,38,38,61.8,40,
+268.0,Jacob Hollister,SEA,TE,4.12,2.5,16,40,41,65.9,37,
+293.0,David Njoku,CLE,TE,4.02,2.23,13,29,33,52.3,45,
+295.0,Durham Smythe,MIA,TE,3.92,1.93,15,29,33,58.8,47,
+289.0,Cole Kmet,CHI,TE,3.88,2.75,16,44,34,62.0,43,
+282.0,Will Dissly,SEA,TE,3.82,1.81,16,29,37,61.1,42,
+328.0,James O'Shaughnessy,JAX,TE,3.61,2.53,15,38,26,54.2,54,
+290.0,Donald Parham,LAC,TE,3.38,1.54,13,20,34,43.9,44,
+313.0,Pharaoh Brown,HOU,TE,3.25,1.23,13,16,28,42.3,52,
+300.0,Ross Dwelley,SFO,TE,3.09,1.5,16,24,31,49.5,48,
+294.0,Adam Shaheen,MIA,TE,2.81,1.38,16,22,33,45.0,46,
+330.0,Tyler Conklin,MIN,TE,2.77,1.62,16,26,25,44.4,56,
+312.0,Marcedes Lewis,GNB,TE,2.58,1.13,15,17,29,38.7,51,
+340.0,MyCole Pruitt,TEN,TE,2.54,0.73,11,8,23,27.9,60,
+342.0,Adam Trautman,NOR,TE,2.54,1.07,15,16,23,38.1,59,
+333.0,Jesse James,DET,TE,2.43,1.38,16,22,25,38.9,57,
+327.0,Foster Moreau,LVR,TE,2.06,0.56,16,9,26,33.0,55,
