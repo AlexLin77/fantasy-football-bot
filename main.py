@@ -25,12 +25,17 @@ def main():
         d.rosters["team"+str(i+1)] = Team(teams, rounds, i+1)
 
     for i in range(rounds):
-        for team in d.rosters.values():
-            team.pick()
-
-    print(d.rosters["team1"].players)
+        if i%2 == 0:
+            for i in range(len(d.rosters)):
+                team = d.rosters["team"+str(i+1)]
+                team.pick()
+        else:
+            for i in reversed(range(len(d.rosters))):
+                team = d.rosters["team"+str(i+1)]
+                team.pick()
+                
     print(d.rosters["team5"].players)
-    print(d.rosters["team9"].players)
+    print(d.rosters["team10"].players)
 
 
 if __name__ == "__main__":

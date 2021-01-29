@@ -38,23 +38,23 @@ class Team(Draft):
         wrvalue = wrvalueAdded(wrtable, self.nextPick, self.count+1)
         tevalue = tevalueAdded(tetable, self.nextPick, self.count+1)
 
-        if self.qbs > 1:
-            newqb = (qbvalue[0], 0.5*qbvalue[1], qbvalue[2])
+        if self.qbs >= 1:
+            newqb = (qbvalue[0], 0.1*qbvalue[1], qbvalue[2])
         else:
             newqb = qbvalue
 
-        if self.rbs > 3:
-            newrb = (rbvalue[0], 0.5*rbvalue[1], rbvalue[2])
+        if self.rbs - self.wrs >= 2 or self.rbs >= 3:
+            newrb = (rbvalue[0], 0.1*rbvalue[1], rbvalue[2])
         else:
             newrb = rbvalue
 
-        if self.wrs > 3:
-            newwr = (wrvalue[0], 0.5*wrvalue[1], wrvalue[2])
+        if self.wrs - self.rbs >= 2 or self.wrs >= 3:
+            newwr = (wrvalue[0], 0.1*wrvalue[1], wrvalue[2])
         else:
             newwr = wrvalue
 
-        if self.tes > 1:
-            newte = (tevalue[0], 0.5*tevalue[1], tevalue[2])
+        if self.tes >= 1:
+            newte = (tevalue[0], 0.1*tevalue[1], tevalue[2])
         else:
             newte = tevalue
 
@@ -65,6 +65,8 @@ class Team(Draft):
                 res = pair[1]
                 player = pair[0]
                 position = pair[2]
+
+        print(player)
 
         self.players.append(player)
         self.count += 1
