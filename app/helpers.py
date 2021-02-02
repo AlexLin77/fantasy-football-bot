@@ -29,6 +29,21 @@ def qbvalueAdded(df, nextPick, rd):
     return (df.iat[0, 1], diff, 'QB')
 
 
+def qbPicks(df, ct):
+    df = df.iloc[1:]
+
+    if int(ct) > len(df):
+        entries = len(df)
+    else:
+        entries = int(ct)
+
+    res = []
+    for i in range(entries):
+        res.append((df.iat[i, 1], df.iat[i, 2], df.iat[i, 4]))
+
+    return res
+
+
 def rbvalueAdded(df, nextPick, rd):
     # drop titles row
     df = df.iloc[1:]
@@ -72,6 +87,21 @@ def rbvalueAdded(df, nextPick, rd):
     diff = float(firstPPG) - float(secondPPG)
 
     return (df.iat[marker, 1], diff, 'RB')
+
+
+def otherPicks(df, ct):
+    df = df.iloc[1:]
+
+    if int(ct) > len(df):
+        entries = len(df)
+    else:
+        entries = int(ct)
+
+    res = []
+    for i in range(entries):
+        res.append((df.iat[i, 1], df.iat[i, 2], df.iat[i, 4], df.iat[i, 5]))
+
+    return res
 
 
 def wrvalueAdded(df, nextPick, rd):

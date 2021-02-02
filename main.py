@@ -21,21 +21,30 @@ def main():
     rounds = int(input("Number of rounds in the draft: "))
     d = Draft(teams, rounds)
 
-    for i in range(teams):
-        d.rosters["team"+str(i+1)] = Team(teams, rounds, i+1)
+    for i in range(teams-1):
+        d.rosters["team"+str(i+1)] = Team(teams, rounds, i+1, False)
+    d.rosters["team10"] = Team(teams, rounds, i+1, True)
 
     for i in range(rounds):
-        if i%2 == 0:
+        # print("Round: " + str(i+1))
+        if i % 2 == 0:
             for i in range(len(d.rosters)):
                 team = d.rosters["team"+str(i+1)]
-                team.pick()
+                if team.user:
+                    team.prompt()
+                else:
+                    team.pick()
         else:
             for i in reversed(range(len(d.rosters))):
                 team = d.rosters["team"+str(i+1)]
-                team.pick()
-                
-    print(d.rosters["team5"].players)
-    print(d.rosters["team10"].players)
+                if team.user:
+                    team.prompt()
+                else:
+                    team.pick()
+
+    # print(d.rosters["team5"].players)
+    # print(d.rosters["team2"].players)
+    # # print(d.rosters["team10"].players)
 
 
 if __name__ == "__main__":
