@@ -10,17 +10,45 @@ class Draft:
 
 
 class Team(Draft):
-    def __init__(self, teams, rounds, pos, user):
+    def __init__(self, teams, rounds, pos, name, user):
         super().__init__(teams, rounds)
         self.players = []
         self.nextPick = pos
         self.draftPos = pos
+        self.name = name
         self.user = user
         self.count = 0
         self.qbs = 0
         self.rbs = 0
         self.wrs = 0
         self.tes = 0
+
+    def completePick(self, df, player, position):
+        print(self.name + " selected " + player)
+
+        self.players.append(player)
+        self.count += 1
+
+        if position == 'QB':
+            self.qbs += 1
+            playerName = df.columns.values[1]
+            df.drop(df[df[playerName] == player].index, inplace=True)
+            df.to_csv('qbs.csv', index=False)
+        elif position == 'RB':
+            self.rbs += 1
+            playerName = df.columns.values[1]
+            df.drop(df[df[playerName] == player].index, inplace=True)
+            df.to_csv('rbs.csv', index=False)
+        elif position == 'WR':
+            self.wrs += 1
+            playerName = df.columns.values[1]
+            df.drop(df[df[playerName] == player].index, inplace=True)
+            df.to_csv('wrs.csv', index=False)
+        elif position == 'TE':
+            self.tes += 1
+            playerName = df.columns.values[1]
+            df.drop(df[df[playerName] == player].index, inplace=True)
+            df.to_csv('tes.csv', index=False)
 
     def pick(self):
         qbtable = pandas.read_csv('qbs.csv')
@@ -67,35 +95,14 @@ class Team(Draft):
                 player = pair[0]
                 position = pair[2]
 
-        # print(player)
-
-        self.players.append(player)
-        self.count += 1
-
         if position == 'QB':
-            self.qbs += 1
-            playerName = qbtable.columns.values[1]
-            qbtable.drop(qbtable[qbtable[playerName] ==
-                                 player].index, inplace=True)
-            qbtable.to_csv('qbs.csv', index=False)
+            self.completePick(qbtable, player, 'QB')
         elif position == 'RB':
-            self.rbs += 1
-            playerName = rbtable.columns.values[1]
-            rbtable.drop(rbtable[rbtable[playerName] ==
-                                 player].index, inplace=True)
-            rbtable.to_csv('rbs.csv', index=False)
+            self.completePick(rbtable, player, 'RB')
         elif position == 'WR':
-            self.wrs += 1
-            playerName = wrtable.columns.values[1]
-            wrtable.drop(wrtable[wrtable[playerName] ==
-                                 player].index, inplace=True)
-            wrtable.to_csv('wrs.csv', index=False)
+            self.completePick(wrtable, player, 'WR')
         elif position == 'TE':
-            self.tes += 1
-            playerName = tetable.columns.values[1]
-            tetable.drop(tetable[tetable[playerName] ==
-                                 player].index, inplace=True)
-            tetable.to_csv('tes.csv', index=False)
+            self.completePick(tetable, player, 'TE')
 
     def prompt(self):
         qbtable = pandas.read_csv('qbs.csv')
@@ -109,6 +116,7 @@ class Team(Draft):
             self.nextPick = self.draftPos*2+1
 
         while True:
+            print("It's " + self.name + " turn to pick.")
             search = input("Search by position, or type ALL: ")
             count = input("Number of players displayed: ")
 
@@ -122,20 +130,13 @@ class Team(Draft):
                 if pick.lower() != 'back':
                     picked = False
                     for tup in lst:
-                        if pick.lower() in tup[0].lower():
+                        temp = tup[0].split(" ")
+                        if pick.lower() == temp[1].lower():
                             picked = True
                             player = tup[0]
 
-                            print(tup[0] + " selected.")
-
-                            self.players.append(player)
-                            self.count += 1
-
-                            self.qbs += 1
-                            playerName = qbtable.columns.values[1]
-                            qbtable.drop(qbtable[qbtable[playerName] ==
-                                                 player].index, inplace=True)
-                            qbtable.to_csv('qbs.csv', index=False)
+                            self.completePick(qbtable, player, 'QB')
+                            break
 
                     if picked:
                         break
@@ -153,20 +154,14 @@ class Team(Draft):
                 if pick.lower() != 'back':
                     picked = False
                     for tup in lst:
-                        if pick.lower() in tup[0].lower():
+                        newstr = tup[0].replace("*", "")
+                        newstr2 = newstr.replace("+", "")
+                        temp = newstr2.split(" ")
+                        if pick.lower() == temp[1].lower():
                             picked = True
                             player = tup[0]
 
-                            print(tup[0] + " selected.")
-
-                            self.players.append(player)
-                            self.count += 1
-
-                            self.rbs += 1
-                            playerName = rbtable.columns.values[1]
-                            rbtable.drop(rbtable[rbtable[playerName] ==
-                                                 player].index, inplace=True)
-                            rbtable.to_csv('rbs.csv', index=False)
+                            self.completePick(rbtable, player, 'RB')
 
                     if picked:
                         break
@@ -184,20 +179,14 @@ class Team(Draft):
                 if pick.lower() != 'back':
                     picked = False
                     for tup in lst:
-                        if pick.lower() in tup[0].lower():
+                        newstr = tup[0].replace("*", "")
+                        newstr2 = newstr.replace("+", "")
+                        temp = newstr2.split(" ")
+                        if pick.lower() == temp[1].lower():
                             picked = True
                             player = tup[0]
 
-                            print(tup[0] + " selected.")
-
-                            self.players.append(player)
-                            self.count += 1
-
-                            self.wrs += 1
-                            playerName = wrtable.columns.values[1]
-                            wrtable.drop(wrtable[wrtable[playerName] ==
-                                                 player].index, inplace=True)
-                            wrtable.to_csv('wrs.csv', index=False)
+                            self.completePick(wrtable, player, 'WR')
 
                     if picked:
                         break
@@ -215,20 +204,14 @@ class Team(Draft):
                 if pick.lower() != 'back':
                     picked = False
                     for tup in lst:
-                        if pick.lower() in tup[0].lower():
+                        newstr = tup[0].replace("*", "")
+                        newstr2 = newstr.replace("+", "")
+                        temp = newstr2.split(" ")
+                        if pick.lower() == temp[1].lower():
                             picked = True
                             player = tup[0]
 
-                            print(tup[0] + " selected.")
-
-                            self.players.append(player)
-                            self.count += 1
-
-                            self.tes += 1
-                            playerName = tetable.columns.values[1]
-                            tetable.drop(tetable[tetable[playerName] ==
-                                                 player].index, inplace=True)
-                            tetable.to_csv('tes.csv', index=False)
+                            self.completePick(tetable, player, 'TE')
 
                     if picked:
                         break

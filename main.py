@@ -21,9 +21,15 @@ def main():
     rounds = int(input("Number of rounds in the draft: "))
     d = Draft(teams, rounds)
 
-    for i in range(teams-1):
-        d.rosters["team"+str(i+1)] = Team(teams, rounds, i+1, False)
-    d.rosters["team10"] = Team(teams, rounds, i+1, True)
+    for i in range(teams):
+        userControl = input("Should this team be controlled by a human? (Y/N) ")
+        if userControl == 'y':
+            name = input("Enter a name for this team: ")
+            d.rosters["team"+str(i+1)] = Team(teams, rounds, i+1, name, True)
+        elif userControl == 'n':
+            name = "Computer"+str(i+1)
+            d.rosters["team"+str(i+1)] = Team(teams, rounds, i+1, name, False)
+
 
     for i in range(rounds):
         # print("Round: " + str(i+1))
