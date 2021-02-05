@@ -1,5 +1,6 @@
 Unnamed: 0,Unnamed: 1_level_0,Unnamed: 2_level_0,Unnamed: 3_level_0,ppg,opp,Games,Rushing,Receiving,Fantasy,Fantasy.1,Fantasy.2,Fantasy.3
 ,Player,Tm,FantPos,,,G,Att,Tgt,FantPt,PPR,PosRank,OvRank
+12.0,Aaron Jones*,GNB,RB,18.49,18.86,14,201,63,212,258.9,5,13
 17.0,James Robinson,JAX,RB,17.89,21.43,14,240,60,201,250.4,7,18
 14.0,David Montgomery,CHI,RB,17.65,21.0,15,247,68,211,264.8,6,15
 21.0,Nick Chubb*,CLE,RB,17.31,17.33,12,190,18,192,207.7,9,22
@@ -17,6 +18,7 @@ Unnamed: 0,Unnamed: 1_level_0,Unnamed: 2_level_0,Unnamed: 3_level_0,ppg,opp,Game
 54.0,Mike Davis,CAR,RB,13.77,15.67,15,165,70,148,206.5,18,54
 31.0,Kareem Hunt,CLE,RB,13.66,15.56,16,198,51,181,218.5,10,31
 66.0,Clyde Edwards-Helaire,KAN,RB,13.54,18.08,13,181,54,140,176.0,22,65
+41.0,Ronald Jones II,TAM,RB,13.31,16.71,14,192,42,158,186.3,15,41
 36.0,Melvin Gordon,DEN,RB,13.23,17.27,15,215,44,166,198.4,13,36
 35.0,Kenyan Drake,ARI,RB,12.81,18.0,15,239,31,167,192.2,12,35
 103.0,James Conner,PIT,RB,12.66,16.31,13,169,43,130,164.6,25,

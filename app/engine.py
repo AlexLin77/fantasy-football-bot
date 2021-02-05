@@ -104,6 +104,48 @@ class Team(Draft):
             self.completePick(wrtable, player, 'WR')
         elif position == 'TE':
             self.completePick(tetable, player, 'TE')
+    
+    def recommend(self):
+        qbtable = pandas.read_csv('qbs.csv')
+        rbtable = pandas.read_csv('rbs.csv')
+        wrtable = pandas.read_csv('wrs.csv')
+        tetable = pandas.read_csv('tes.csv')
+
+        qbvalue = qbvalueAdded(qbtable, self.nextPick, self.count+1)
+        rbvalue = rbvalueAdded(rbtable, self.nextPick, self.count+1)
+        wrvalue = wrvalueAdded(wrtable, self.nextPick, self.count+1)
+        tevalue = tevalueAdded(tetable, self.nextPick, self.count+1)
+
+        if self.qbs >= 1:
+            newqb = (qbvalue[0], 0.1*qbvalue[1], qbvalue[2])
+        else:
+            newqb = qbvalue
+
+        if self.rbs - self.wrs >= 2 or self.rbs >= 3:
+            newrb = (rbvalue[0], 0.1*rbvalue[1], rbvalue[2])
+        else:
+            newrb = rbvalue
+
+        if self.wrs - self.rbs >= 2 or self.wrs >= 3:
+            newwr = (wrvalue[0], 0.1*wrvalue[1], wrvalue[2])
+        else:
+            newwr = wrvalue
+
+        if self.tes >= 1:
+            newte = (tevalue[0], 0.1*0.6*tevalue[1], tevalue[2])
+        else:
+            newte = (tevalue[0], 0.6*tevalue[1], tevalue[2])
+        
+        vals = [newqb, newrb, newwr, newte]
+        res = 0
+        for pair in vals:
+            if pair[1] > res:
+                res = pair[1]
+                player = pair[0]
+                position = pair[2]
+        
+        print("Recommended Pick: " + player + " | " + position)
+
 
     def prompt(self):
         qbtable = pandas.read_csv('qbs.csv')
@@ -123,6 +165,7 @@ class Team(Draft):
             self.user = False
             self.pick()
         else:
+            self.recommend()
             while True:
                 search = input("Search by position: ")
                 count = input("How many players to display? ")

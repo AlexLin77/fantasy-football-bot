@@ -1,10 +1,8 @@
-Sample Module Repository
+Fantasy Football Draft Assistant
 ========================
 
-This simple project is an example repo for Python projects.
-
-`Learn more <http://www.kennethreitz.org/essays/repository-structure-and-python>`_.
+Fantasy football draft simulator and player picking assistant, using a value
+added algorithm based on previous years statistics.
 
 ---------------
 
-If you want to learn more about ``setup.py`` files, check out `this repository <https://github.com/kennethreitz/setup.py>`_.
