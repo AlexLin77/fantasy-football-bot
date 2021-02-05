@@ -39,7 +39,7 @@ def qbPicks(df, ct):
 
     res = []
     for i in range(entries):
-        res.append((df.iat[i, 1], df.iat[i, 2], df.iat[i, 4]))
+        res.append((df.iat[i, 1], df.iat[i, 2], df.iat[i, 3], df.iat[i, 4]))
 
     return res
 
@@ -99,7 +99,8 @@ def otherPicks(df, ct):
 
     res = []
     for i in range(entries):
-        res.append((df.iat[i, 1], df.iat[i, 2], df.iat[i, 4], df.iat[i, 5]))
+        res.append((df.iat[i, 1], df.iat[i, 2], df.iat[i, 3], 
+        df.iat[i, 4], df.iat[i, 5]))
 
     return res
 

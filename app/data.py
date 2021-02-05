@@ -1,5 +1,3 @@
-#from bs4 import BeautifulSoup
-#from . import helpers
 import pandas
 import requests
 import math
@@ -47,7 +45,6 @@ def processor(df, position):
             total = group.iat[i, 7]
             gamesPlayed = group.iat[i, 3]
             touches = int(group.iat[i, 4]) + int(group.iat[i, 5])
-
             num = round((float(total) / float(gamesPlayed)), 2)
             num2 = round((float(touches) / float(gamesPlayed)), 2)
             avg.append(num)
@@ -70,7 +67,6 @@ def processor(df, position):
             total = group.iat[i, 6]
             gamesPlayed = group.iat[i, 3]
             tgts = group.iat[i, 4]
-
             num = round((float(total) / float(gamesPlayed)), 2)
             num2 = round((float(tgts) / float(gamesPlayed)), 2)
             avg.append(num)

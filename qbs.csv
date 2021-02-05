@@ -1,41 +1,42 @@
-Unnamed: 0,Unnamed: 1_level_0,Unnamed: 2_level_0,Unnamed: 3_level_0,ppg,Games,Fantasy,Fantasy.1,Fantasy.2,Fantasy.3
+,Unnamed: 1_level_0,Unnamed: 2_level_0,Unnamed: 3_level_0,ppg,Games,Fantasy,Fantasy,Fantasy,Fantasy
 ,Player,Tm,FantPos,,G,FantPt,PPR,PosRank,OvRank
-9.0,Patrick Mahomes *,KAN,QB,24.96,15,374,374.4,4,10
-6.0,Josh Allen *,BUF,QB,24.76,16,395,396.1,1,7
-7.0,Aaron Rodgers *+,GNB,QB,23.96,16,382,383.3,2,8
-8.0,Kyler Murray *,ARI,QB,23.67,16,379,378.7,3,9
-10.0,Deshaun Watson *,HOU,QB,23.08,16,369,369.3,5,11
-15.0,Russell Wilson *,SEA,QB,22.49,16,360,359.8,6,16
-30.0,Lamar Jackson,BAL,QB,22.19,15,333,332.8,10,30
-28.0,Justin Herbert,LAC,QB,22.19,15,333,332.8,9,29
-22.0,Ryan Tannehill,TEN,QB,21.52,16,343,344.4,7,23
-24.0,Tom Brady,TAM,QB,21.12,16,338,337.9,8,25
-45.0,Kirk Cousins,MIN,QB,19.14,16,306,306.2,11,45
-95.0,Gardner Minshew II,JAX,QB,17.86,9,160,160.7,26,
-82.0,Ben Roethlisberger,PIT,QB,17.81,15,267,267.2,14,
-80.0,Matt Ryan,ATL,QB,17.65,16,282,282.4,12,
-89.0,Drew Brees,NOR,QB,17.46,12,209,209.5,21,
-84.0,Cam Newton,NWE,QB,17.4,15,259,261.0,16,
-94.0,Joe Burrow,CIN,QB,17.37,10,174,173.7,25,
-97.0,Ryan Fitzpatrick,MIA,QB,17.08,9,153,153.7,28,
-81.0,Derek Carr,LVR,QB,17.01,16,272,272.1,13,
-90.0,Carson Wentz,PHI,QB,16.53,12,198,198.4,22,
-83.0,Matthew Stafford,DET,QB,16.29,16,261,260.6,15,
-86.0,Teddy Bridgewater,CAR,QB,16.08,15,241,241.2,18,
-87.0,Jared Goff,LAR,QB,16.0,15,240,240.0,19,
-85.0,Baker Mayfield,CLE,QB,15.54,16,248,248.6,17,
-96.0,Mitchell Trubisky,CHI,QB,15.37,10,154,153.7,27,
-88.0,Philip Rivers,IND,QB,15.0,16,240,240.0,20,
-92.0,Drew Lock,DEN,QB,13.95,13,181,181.3,23,
-101.0,Tua Tagovailoa,MIA,QB,13.55,10,135,135.5,31,
-93.0,Daniel Jones,NYG,QB,12.86,14,180,180.0,24,
-99.0,Andy Dalton,DAL,QB,12.45,11,136,136.9,30,
-209.0,Mike Glennon,JAX,QB,12.12,5,61,60.6,40,
-113.0,Nick Mullens,SFO,QB,11.63,10,116,116.3,34,
-132.0,Nick Foles,CHI,QB,11.58,9,104,104.2,36,
-102.0,Sam Darnold,NYJ,QB,11.17,12,134,134.0,33,
-204.0,Jimmy Garoppolo,SFO,QB,10.72,6,64,64.3,39,
-98.0,Taysom Hill,NOR,QB,9.79,16,149,156.6,29,
-194.0,Dwayne Haskins,WAS,QB,9.74,7,68,68.2,38,
-179.0,Alex Smith,WAS,QB,8.95,8,72,71.6,37,
-128.0,Jalen Hurts,PHI,QB,7.27,15,108,109.1,35,
+100,Dak Prescott,DAL,QB,27.12,5,135,135.6,32,
+9,Patrick Mahomes *,KAN,QB,24.96,15,374,374.4,4,10
+6,Josh Allen *,BUF,QB,24.76,16,395,396.1,1,7
+7,Aaron Rodgers *+,GNB,QB,23.96,16,382,383.3,2,8
+8,Kyler Murray *,ARI,QB,23.67,16,379,378.7,3,9
+10,Deshaun Watson *,HOU,QB,23.08,16,369,369.3,5,11
+15,Russell Wilson *,SEA,QB,22.49,16,360,359.8,6,16
+30,Lamar Jackson,BAL,QB,22.19,15,333,332.8,10,30
+28,Justin Herbert,LAC,QB,22.19,15,333,332.8,9,29
+22,Ryan Tannehill,TEN,QB,21.52,16,343,344.4,7,23
+24,Tom Brady,TAM,QB,21.12,16,338,337.9,8,25
+45,Kirk Cousins,MIN,QB,19.14,16,306,306.2,11,45
+95,Gardner Minshew II,JAX,QB,17.86,9,160,160.7,26,
+82,Ben Roethlisberger,PIT,QB,17.81,15,267,267.2,14,
+80,Matt Ryan,ATL,QB,17.65,16,282,282.4,12,
+89,Drew Brees,NOR,QB,17.46,12,209,209.5,21,
+84,Cam Newton,NWE,QB,17.4,15,259,261.0,16,
+94,Joe Burrow,CIN,QB,17.37,10,174,173.7,25,
+97,Ryan Fitzpatrick,MIA,QB,17.08,9,153,153.7,28,
+81,Derek Carr,LVR,QB,17.01,16,272,272.1,13,
+90,Carson Wentz,PHI,QB,16.53,12,198,198.4,22,
+83,Matthew Stafford,DET,QB,16.29,16,261,260.6,15,
+86,Teddy Bridgewater,CAR,QB,16.08,15,241,241.2,18,
+87,Jared Goff,LAR,QB,16.0,15,240,240.0,19,
+85,Baker Mayfield,CLE,QB,15.54,16,248,248.6,17,
+96,Mitchell Trubisky,CHI,QB,15.37,10,154,153.7,27,
+88,Philip Rivers,IND,QB,15.0,16,240,240.0,20,
+92,Drew Lock,DEN,QB,13.95,13,181,181.3,23,
+101,Tua Tagovailoa,MIA,QB,13.55,10,135,135.5,31,
+93,Daniel Jones,NYG,QB,12.86,14,180,180.0,24,
+99,Andy Dalton,DAL,QB,12.45,11,136,136.9,30,
+209,Mike Glennon,JAX,QB,12.12,5,61,60.6,40,
+113,Nick Mullens,SFO,QB,11.63,10,116,116.3,34,
+132,Nick Foles,CHI,QB,11.58,9,104,104.2,36,
+102,Sam Darnold,NYJ,QB,11.17,12,134,134.0,33,
+204,Jimmy Garoppolo,SFO,QB,10.72,6,64,64.3,39,
+98,Taysom Hill,NOR,QB,9.79,16,149,156.6,29,
+194,Dwayne Haskins,WAS,QB,9.74,7,68,68.2,38,
+179,Alex Smith,WAS,QB,8.95,8,72,71.6,37,
+128,Jalen Hurts,PHI,QB,7.27,15,108,109.1,35,
