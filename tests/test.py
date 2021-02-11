@@ -23,7 +23,10 @@ class TestBotFunctions(unittest.TestCase):
     qbtable = pandas.read_csv('qbs.csv')
    
     def test_qbvalueAdded(self):
-        assert True
+        self.assertEquals(qbvalueAdded(qbtable, 5, 2), ("Patrick Mahomes *", 2.16, 'QB'))
+        self.assertEquals(qbvalueAdded(qbtable, 5, 7), ("Patrick Mahomes *", 2.16, "QB"))
+        self.assertEquals(qbvalueAdded(qbtable, 12, 7), ("Josh Allen *", 2.39, "QB"))
+        self.assertEquals(qbvalueAdded(qbtable, 18, 7), ("Aaron Rodgers *+", 3.16, "QB"))
     
     
 
