@@ -90,7 +90,6 @@ class Team(Draft):
         else:
             self.nextPick = self.draftPos*2+1
 
-        # key = playerName, value = valueAdded, pos = position
         qbvalue = qbvalueAdded(qbtable, self.nextPick, self.count+1)
         rbvalue = rbvalueAdded(rbtable, self.nextPick, self.count+1)
         wrvalue = wrvalueAdded(wrtable, self.nextPick, self.count+1)
@@ -111,6 +110,7 @@ class Team(Draft):
         else:
             newwr = wrvalue
 
+        # artificial deduction on TE's right now, may change later
         if self.tes >= 1:
             newte = (tevalue[0], 0.1*0.6*tevalue[1], tevalue[2])
         else:
