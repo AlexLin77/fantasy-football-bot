@@ -1,25 +1,20 @@
 # -*- coding: utf-8 -*-
 
-# Learn more: https://github.com/kennethreitz/setup.py
-
 from setuptools import setup, find_packages
+import pathlib
 
-
-with open('README.rst') as f:
-    readme = f.read()
-
-with open('LICENSE') as f:
-    license = f.read()
+here = pathlib.Path(__file__).parent.resolve()
 
 setup(
-    name='sample',
-    version='0.1.0',
-    description='Sample package for Python-Guide.org',
-    long_description=readme,
-    author='Kenneth Reitz',
-    author_email='me@kennethreitz.com',
-    url='https://github.com/kennethreitz/samplemod',
+    name='ffbot',
+    version='2.0.0',
+    description='Fantasy football draft simulator and assistant',
+    long_description=(here / 'README.md').read_text(encoding='utf-8'),
+    author='Alex Lin',
+    author_email='alexjlin77@gmail.com',
+    url='https://github.com/AlexLin77/fantasy-football-bot',
     license=license,
-    packages=find_packages(exclude=('tests', 'docs'))
+    packages=find_packages(exclude=('tests')),
+    install_requires=['pandas==1.1.0', 'requests==2.23.0']
 )
 

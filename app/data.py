@@ -2,18 +2,25 @@ import pandas
 import requests
 import math
 
-
+# create DataFrame from PFR statistics table
 def parser(url):
+    """ Creates a DataFrame from ProFootballReference fantasy statistics table.
+
+    Requires: valid ProFootballReference table.
+    """
     df = pandas.read_html(url)[0]
 
     df = df.drop(df.columns[[0]], axis=1)
 
     return df
 
-# create separate tables for positions
-
 
 def processor(df, position):
+    """ Creates a new DataFrame organized by position and adds points or 
+    opportunity value columns.
+
+    position - str : position of players in this DataFrame
+    """
     pos = df.columns.values[2]
 
     group = df[(df[pos] == position)]
@@ -21,7 +28,6 @@ def processor(df, position):
     if position == 'QB':
         group = group.iloc[:, [0, 1, 2, 4, 25, 26, 30, 31]]
 
-        # add ppg column and sort
         avg = []
         for i in range(len(group)):
             total = group.iat[i, 5]

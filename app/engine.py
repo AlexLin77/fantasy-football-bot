@@ -4,6 +4,12 @@ import pandas
 
 
 class Draft:
+    """ Class to represent a Draft.
+
+    teams : int - number of teams in the draft
+    rounds : int - number of rounds in the draft
+    rosters : (dict of str : Team) - maps team ID's to Team objects
+    """
     def __init__(self, teams, rounds):
         self.teams = teams
         self.rounds = rounds
@@ -11,6 +17,19 @@ class Draft:
 
 
 class Team(Draft):
+    """ Class to represent a Team.
+
+    players : list of str - list of players on this Team
+    nextPick : int - number of picks until next turn
+    draftPos : int - draft position of this Team
+    name : str - this Team's name
+    user : boolean - True if controlled manually, False if controlled by AI
+    count : int - number of players on this team
+    qbs : int - number of QB's on this team
+    rbs : int - number of RB's on this team
+    wrs : int - number of WR's on this team
+    tes : int - number of TE's on this team
+    """
     def __init__(self, teams, rounds, pos, name, user):
         super().__init__(teams, rounds)
         self.players = []
@@ -25,6 +44,12 @@ class Team(Draft):
         self.tes = 0
 
     def completePick(self, df, player, position):
+        """Performs process of completing a player pick.
+
+        df : DataFrame - dataframe to edit after pick occurs
+        player : str - player selected during pick
+        position : str - selected player's position
+        """
         print(self.name + " selected " + player)
 
         self.players.append(player)
@@ -52,6 +77,9 @@ class Team(Draft):
             df.to_csv('tes.csv', index=False)
 
     def pick(self):
+        """ Calculates best player to pick at the current draft position and 
+        picks the player.
+        """
         qbtable = pandas.read_csv('qbs.csv')
         rbtable = pandas.read_csv('rbs.csv')
         wrtable = pandas.read_csv('wrs.csv')
@@ -106,6 +134,9 @@ class Team(Draft):
             self.completePick(tetable, player, 'TE')
     
     def recommend(self):
+        """ Calculates best player to pick at the current draft position and 
+        prints the recommended player.
+        """
         qbtable = pandas.read_csv('qbs.csv')
         rbtable = pandas.read_csv('rbs.csv')
         wrtable = pandas.read_csv('wrs.csv')
@@ -148,6 +179,8 @@ class Team(Draft):
 
 
     def prompt(self):
+        """ Prompts the user when Team is in user mode.
+        """
         qbtable = pandas.read_csv('qbs.csv')
         rbtable = pandas.read_csv('rbs.csv')
         wrtable = pandas.read_csv('wrs.csv')
@@ -278,6 +311,9 @@ class Team(Draft):
                     print("Not a valid position. Please enter QB, RB, WR, or TE")
       
     def entry(self):
+        """ Prompts user for manual entry of selected players when in manual 
+        entry mode.
+        """
         pick = input("Enter the selected player's last name and position: ")
         picklst = pick.split(" ")
 
@@ -335,6 +371,8 @@ class Team(Draft):
 
  
 def simulate():
+    """ Simulates a draft based on the program's player picking algorithm.
+    """
     url = 'https://www.pro-football-reference.com/years/2020/fantasy.htm'
 
     df = parser(url)
@@ -363,7 +401,6 @@ def simulate():
             d.rosters["team"+str(i+1)] = Team(teams, rounds, i+1, name, False)
 
     for i in range(rounds):
-        # print("Round: " + str(i+1))
         if i % 2 == 0:
             for i in range(len(d.rosters)):
                 team = d.rosters["team"+str(i+1)]
@@ -378,10 +415,6 @@ def simulate():
                     team.prompt()
                 else:
                     team.pick()
-
-    # print(d.rosters["team5"].players)
-    # print(d.rosters["team2"].players)
-    # # print(d.rosters["team10"].players)
 
 def manual():
     url = 'https://www.pro-football-reference.com/years/2020/fantasy.htm'

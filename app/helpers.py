@@ -1,9 +1,14 @@
 
 def qbvalueAdded(df, nextPick, rd):
-    # drop titles row
+    """ Calculate the value of picking a QB at the current position instead 
+    of the next round.
+
+    df : DataFrame - dataframe to parse for QB data. Should contain only QB's
+    nextPick : int - number of picks until player's next pick
+    rd : int - current round of draft
+    """
     df = df.iloc[1:]
 
-    # when less available players
     if nextPick+1 > len(df):
         comps = len(df)
     else:
@@ -13,12 +18,10 @@ def qbvalueAdded(df, nextPick, rd):
         if i == 0:
             firstPPG = df.iat[i, 4]
             secondPPG = df.iat[i, 4]
-        # before round 5, ~1 QB per rotation
         if rd < 5:
             target = int(max(round(1/20 * nextPick), 1))
             if i == target:
                 secondPPG = df.iat[target, 4]
-        # after round 5, ~3 QB per rotation
         else:
             target = int(max(round(3/20 * nextPick), 1))
             if i == target:
@@ -30,6 +33,11 @@ def qbvalueAdded(df, nextPick, rd):
 
 
 def qbPicks(df, ct):
+    """ Returns a list of the top ranked QB's currently available.
+
+    df : DataFrame - dataframe to parse for QB data. Should contain only QB's
+    ct : int - number of QB entries to return.
+    """
     df = df.iloc[1:]
 
     if int(ct) > len(df):
@@ -45,10 +53,15 @@ def qbPicks(df, ct):
 
 
 def rbvalueAdded(df, nextPick, rd):
-    # drop titles row
+    """ Calculate the value of picking an RB at the current position instead 
+    of the next round.
+
+    df : DataFrame - dataframe to parse for RB data. Should contain only RB's
+    nextPick : int - number of picks until player's next pick
+    rd : int - current round of draft
+    """
     df = df.iloc[1:]
 
-    # when less available players
     if nextPick+1 > len(df):
         comps = len(df)
     else:
@@ -90,6 +103,12 @@ def rbvalueAdded(df, nextPick, rd):
 
 
 def otherPicks(df, ct):
+    """ Returns a list of the top ranked non-QB's currently available.
+
+    df : DataFrame - dataframe to parse for player data. Should only contain 1
+    position classification
+    ct : int - number of QB entries to return.
+    """
     df = df.iloc[1:]
 
     if int(ct) > len(df):
@@ -106,10 +125,15 @@ def otherPicks(df, ct):
 
 
 def wrvalueAdded(df, nextPick, rd):
-    # drop titles row
+    """ Calculate the value of picking a WR at the current position instead 
+    of the next round.
+
+    df : DataFrame - dataframe to parse for WR data. Should only contain WR's
+    nextPick : int - number of picks until player's next pick
+    rd : int - current round of draft
+    """
     df = df.iloc[1:]
 
-    # when less available players
     if nextPick+1 > len(df):
         comps = len(df)
     else:
@@ -150,10 +174,15 @@ def wrvalueAdded(df, nextPick, rd):
 
 
 def tevalueAdded(df, nextPick, rd):
-    # drop titles row
+    """ Calculate the value of picking a TE at the current position instead 
+    of the next round.
+
+    df : DataFrame - dataframe to parse for TE data. Should only contain TE's
+    nextPick : int - number of picks until player's next pick
+    rd : int - current round of draft
+    """
     df = df.iloc[1:]
 
-    # when less available players
     if nextPick+1 > len(df):
         comps = len(df)
     else:
